@@ -8,7 +8,7 @@ function Home() {
     <View>
       <Text>
         Welcome to the Home Screen Welcome to the Home Screen Welcome to the
-        Home Screen Welcome to the Home Screen Welcome to the Home Screen
+        Home Screen Welcome to the Home Screen Welcome to the Home Scree
       </Text>
     </View>
   );

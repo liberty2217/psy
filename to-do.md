@@ -1,0 +1,3 @@
+- [ ] add options of screen inside of screen file 
+- [ ] and routeNames enum according to best practices 
+- [ ] add to notes that we need to add proper localization in the future

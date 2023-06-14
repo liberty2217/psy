@@ -5,12 +5,11 @@ import {IntroductionScreen} from '../screens/IntroductionScreen/IntroductionScre
 import {LoginScreen} from '../screens/IntroductionScreen/LoginScreen/LoginScreen';
 import {SignUpScreen} from '../screens/IntroductionScreen/LoginScreen/SignUpScreen/SignUpScreen';
 import {NavigationParamList} from './navigationParamList';
-import {Screen} from './types/screen';
 import {Routes} from './routes';
 
 const AuthStack = createNativeStackNavigator<NavigationParamList>();
 
-export const AuthNavigator: Screen<Routes.AuthNavigator> = () => {
+export const AuthNavigator = () => {
   return (
     <AuthStack.Navigator>
       <AuthStack.Screen

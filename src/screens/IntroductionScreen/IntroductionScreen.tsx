@@ -6,8 +6,12 @@ import {CardCarousel} from './views/CardCarousel/CardCarousel';
 import {DarkModeRightButton} from '../../components/DarkModeButton/DarkModeButton';
 import {SharedButton} from '../../components/Shared/Button/SharedButton';
 import {useStyles} from './styles';
+import {Screen} from '../../navigation/types/screen';
+import {Routes} from '../../navigation/routes';
 
-export const RegisterScreen = () => {
+export const IntroductionScreen: Screen<Routes.IntroductionScreen> = ({
+  navigation,
+}) => {
   const styles = useStyles();
 
   return (
@@ -26,7 +30,11 @@ export const RegisterScreen = () => {
           <Text style={styles.bottomText}>
             <Text style={styles.plainText}>
               Dont have account yet?
-              <Text style={styles.signUpText}> SignUp here</Text>
+              <Text
+                style={styles.signUpText}
+                onPress={() => navigation.navigate(Routes.SignUpScreen)}>
+                {`${' SignUp here'}`}
+              </Text>
             </Text>
           </Text>
         </View>
@@ -39,3 +47,7 @@ export const RegisterScreen = () => {
     </SafeAreaView>
   );
 };
+
+IntroductionScreen.options = () => ({
+  headerShown: false,
+});

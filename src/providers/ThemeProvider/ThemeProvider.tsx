@@ -1,8 +1,8 @@
 import React, {useEffect, useMemo, useState, useCallback} from 'react';
 import {StatusBar} from 'react-native';
-import {COLORS, DARK_COLORS} from '../../styles/colors';
+import {COLORS, DARK_COLORS} from '../../sharedStyles/colors';
 import {getCurrentTheme, setCurrentTheme} from './persist';
-import {FONTS} from '../../styles/fonts';
+import {FONTS} from '../../sharedStyles/fonts';
 
 export enum THEME {
   light = 'light',

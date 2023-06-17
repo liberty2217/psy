@@ -5,7 +5,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import {useStyles} from './styles';
-import {COLORS} from '../../../../styles/colors';
+import {COLORS} from '../../../../sharedStyles/colors';
 
 interface DarkModeSwitchProps {
   value: boolean;

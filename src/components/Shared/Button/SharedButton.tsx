@@ -31,7 +31,15 @@ export const SharedButton: FC<SharedButtonProps> = ({
     <Pressable
       onPress={onPress}
       disabled={disabled || isLoading}
-      style={{...styles.button, ...buttonStyle}}>
+      style={[
+        styles.button,
+        buttonStyle,
+        {
+          backgroundColor: disabled
+            ? theme.COLORS.disabled
+            : theme.COLORS.primaryGreen,
+        },
+      ]}>
       <View>{content}</View>
     </Pressable>
   );

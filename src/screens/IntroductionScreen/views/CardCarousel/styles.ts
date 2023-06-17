@@ -1,4 +1,4 @@
-import {createStyles} from '../../../../styles/createStyles';
+import {createStyles} from '../../../../sharedStyles/createStyles';
 import {Dimensions} from 'react-native';
 
 const {height: viewportHeight} = Dimensions.get('window');

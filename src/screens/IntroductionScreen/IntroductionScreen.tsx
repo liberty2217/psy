@@ -24,7 +24,7 @@ export const IntroductionScreen: Screen<Routes.IntroductionScreen> = ({
         <View style={styles.bottomContainer}>
           <SharedButton
             label="Get Started"
-            onPress={() => null}
+            onPress={() => navigation.navigate(Routes.SignUpScreen)}
             buttonStyle={styles.button}
           />
           <Text style={styles.bottomText}>
@@ -32,7 +32,7 @@ export const IntroductionScreen: Screen<Routes.IntroductionScreen> = ({
               Dont have account yet?
               <Text
                 style={styles.signUpText}
-                onPress={() => navigation.navigate(Routes.SignUpScreen)}>
+                onPress={() => navigation.navigate(Routes.LoginScreen)}>
                 {`${' SignUp here'}`}
               </Text>
             </Text>

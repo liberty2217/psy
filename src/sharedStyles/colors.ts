@@ -2,13 +2,16 @@ export const COLORS = {
   primaryGreen: '#06afa5',
   primaryYellow: '#e9b677',
 
+  secondaryGreen: '#024a48',
+
+  disabled: '#999999',
+
   white: '#FFFFFF',
   black: '#000000',
   gray: '#838181',
-
   transparent: 'transparent',
-
   background: '#ffffff',
+  redErrorText: '#FF3333',
 
   /**
    * color that should be different depending on theme:

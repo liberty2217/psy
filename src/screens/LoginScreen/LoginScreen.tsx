@@ -8,7 +8,3 @@ export const LoginScreen = () => {
     </View>
   );
 };
-
-LoginScreen.options = () => ({
-  headerShown: false,
-});

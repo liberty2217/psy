@@ -1,4 +1,4 @@
-import {createStyles} from '../../styles/createStyles';
+import {createStyles} from '../../sharedStyles/createStyles';
 
 export const useStyles = createStyles(theme => ({
   wrapper: {

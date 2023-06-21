@@ -1,0 +1,17 @@
+- [ ] add options of screen inside of screen file 
+- [ ] and routeNames enum according to best practices 
+- [ ] add to notes that we need to add proper localization in the future
+- [ ] add screens of app to any of repo to readme
+- [ ] rename to env 
+- [ ] add params to login that are passed from signup (only username)
+- [ ] prepare enum routes for requests
+- [ ] add aesterisks to password
+- [ ] add logic of creating strong password on UI side
+- [ ] add interaction manager for notify login and signup
+- [ ] hide password with asterisks
+- [ ] add app icon using Midjorney
+- [ ] add spalsh screen as well from Midhorney
+- [ ] add face login
+- [ ] solve issue when we have multiple login and all refresh tokens are not deleted from the server (if not solved)
+- [ ] wrap navigation to types so we can see remove all ts errors (example in old project)
+- [ ] add spalsh screen with lottie animation

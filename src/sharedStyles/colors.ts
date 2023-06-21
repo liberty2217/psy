@@ -6,6 +6,10 @@ export const COLORS = {
 
   disabled: '#999999',
 
+  error: '#ED4956',
+  success: '#38A745',
+  info: '#FAFAFA',
+
   white: '#FFFFFF',
   black: '#000000',
   gray: '#838181',

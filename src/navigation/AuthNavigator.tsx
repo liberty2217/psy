@@ -20,7 +20,11 @@ export const AuthNavigator = () => {
         component={IntroductionScreen}
         options={IntroductionScreen.options?.()}
       />
-      <AuthStack.Screen name={Routes.LoginScreen} component={LoginScreen} />
+      <AuthStack.Screen
+        name={Routes.LoginScreen}
+        component={LoginScreen}
+        options={LoginScreen.options?.()}
+      />
       <AuthStack.Screen
         name={Routes.SignUpScreen}
         component={SignUpScreen}

@@ -1,6 +1,6 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import {Text, View} from 'react-native-ui-lib';
+import {SafeAreaView, Text} from 'react-native';
+import {View} from 'react-native-ui-lib';
 import {Logo} from '../../components/Shared/Logo/Logo';
 import {CardCarousel} from './views/CardCarousel/CardCarousel';
 import {DarkModeRightButton} from '../../components/DarkModeButton/DarkModeButton';
@@ -24,19 +24,18 @@ export const IntroductionScreen: Screen<Routes.IntroductionScreen> = ({
         <View style={styles.bottomContainer}>
           <SharedButton
             label="Get Started"
-            onPress={() => navigation.navigate(Routes.SignUpScreen)}
+            onPress={() => navigation.navigate(Routes.LoginScreen)}
             buttonStyle={styles.button}
           />
-          <Text style={styles.bottomText}>
-            <Text style={styles.plainText}>
-              Dont have account yet?
-              <Text
-                style={styles.signUpText}
-                onPress={() => navigation.navigate(Routes.LoginScreen)}>
-                {`${' SignUp here'}`}
-              </Text>
+          <View style={styles.bottomText}>
+            <Text style={styles.plainText}>Dont have account yet?</Text>
+            <Text
+              style={styles.signUpText}
+              onPress={() => navigation.navigate(Routes.SignUpScreen)}
+              suppressHighlighting={true}>
+              {`${' Sign Up here'}`}
             </Text>
-          </Text>
+          </View>
         </View>
 
         <Text style={styles.disclaimerText}>

@@ -1,21 +1,20 @@
 import React, {createContext, useContext} from 'react';
 import {
-  InitialValues,
+  SignUpInitialValues,
   OnSubmitSignUp,
   UseSignUpForm,
   useSignUpForm,
-} from '../../useSignUpForm';
+} from '../../hooks/useSignUpForm';
 
 const SignUpFormContext = createContext<UseSignUpForm>({} as never);
 
 interface FormProps {
   onSubmit: OnSubmitSignUp;
-  initialValues?: InitialValues;
+  initialValues?: SignUpInitialValues;
   children: React.ReactNode;
 }
 
-export const useAddBusinessReviewFormContext = () =>
-  useContext(SignUpFormContext);
+export const useSignUpFormContext = () => useContext(SignUpFormContext);
 
 export const SignUpForm: React.FC<FormProps> = ({
   children,

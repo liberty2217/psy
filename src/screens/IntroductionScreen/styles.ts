@@ -20,12 +20,13 @@ export const useStyles = createStyles(theme => ({
     flex: 1,
     marginTop: 30,
   },
-  bottomText: {alignSelf: 'center', paddingTop: 15},
+  bottomText: {paddingTop: 15, alignItems: 'center'},
   plainText: {
     fontFamily: theme.FONTS.Regular,
     color: theme.COLORS.darkSwitch.text,
   },
   signUpText: {
+    marginTop: 5,
     fontFamily: theme.FONTS.SemiBold,
     color: theme.COLORS.primaryGreen,
   },

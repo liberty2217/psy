@@ -12,7 +12,8 @@ type InputWithHintProps = {
 } & TextInputProps;
 
 export const InputWithHint: React.FC<InputWithHintProps> = props => {
-  const {error, textInputContainerStyle, onBlur, onFocus} = props;
+  const {error, textInputContainerStyle, onBlur, onFocus, secureTextEntry} =
+    props;
   const [focus, setFocus] = useState(false);
 
   const styles = useStyles();
@@ -34,6 +35,8 @@ export const InputWithHint: React.FC<InputWithHintProps> = props => {
           onBlur={event => [setFocus(false), onBlur?.(event)]}
           onFocus={event => [setFocus(true), onFocus?.(event)]}
           placeholderTextColor={theme.COLORS.gray}
+          secureTextEntry={secureTextEntry}
+          textContentType="none"
         />
       </View>
       {error ? <Text style={styles.hintText}>{error}</Text> : null}

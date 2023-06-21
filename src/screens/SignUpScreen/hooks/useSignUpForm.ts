@@ -1,15 +1,17 @@
 import * as yup from 'yup';
-import {useForm, OnSubmit} from '../../hooks/useForm';
-import {USERNAME_REGEX} from '../../constants/constants';
+import {useForm, OnSubmit} from '../../../hooks/useForm';
+import {SIGNUP_VALIDATION_RULES} from '../../../constants/userConstants';
 
-export type InitialValues = {
+const {USERNAME, PASSWORD} = SIGNUP_VALIDATION_RULES;
+
+export type SignUpInitialValues = {
   email: string;
   username: string;
   password: string;
   confirmPassword: string;
 };
 
-export const INITIAL_VALUES: InitialValues = {
+export const SIGN_UP_INITIAL_VALUES: SignUpInitialValues = {
   email: '',
   username: '',
   password: '',
@@ -22,14 +24,14 @@ const getValidationSchema = () =>
     username: yup
       .string()
       .required()
-      .min(5, 'Username must be at least 5 characters long')
-      .max(30, 'Username must not exceed 30 characters')
-      .matches(USERNAME_REGEX, "Username can't contain special characters"),
+      .min(USERNAME.MIN_LENGTH, 'Username must be at least 5 characters long')
+      .max(USERNAME.MAX_LENGTH, 'Username must not exceed 30 characters')
+      .matches(USERNAME.REGEX, "Username can't contain special characters"),
     password: yup
       .string()
       .required()
-      .min(8, 'Password must be at least 8 characters long')
-      .max(50, 'Password must not exceed 50 characters'),
+      .min(PASSWORD.MIN_LENGTH, 'Password must be at least 8 characters long')
+      .max(PASSWORD.MAX_LENGTH, 'Password must not exceed 50 characters'),
     confirmPassword: yup
       .string()
       .oneOf([yup.ref('password')], 'Passwords must match')
@@ -44,12 +46,12 @@ export type OnSubmitSignUp = OnSubmit<SignUpFormData>;
 
 export const useSignUpForm = (
   onSubmit: OnSubmitSignUp,
-  initialValues?: InitialValues,
+  initialValues?: SignUpInitialValues,
 ) => {
   const validationSchema = getValidationSchema();
 
   return useForm<SignUpFormData>({
-    initialValues: initialValues || INITIAL_VALUES,
+    initialValues: initialValues || SIGN_UP_INITIAL_VALUES,
     onSubmit,
     validationSchema,
   });

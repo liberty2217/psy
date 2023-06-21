@@ -1,7 +1,7 @@
 import React from 'react';
 import {useCallback} from 'react';
-import {ThemeType} from '../../providers/ThemeProvider/ThemeProvider';
-import {createStyles} from '../../sharedStyles/createStyles';
+import {ThemeType} from '../providers/ThemeProvider/ThemeProvider';
+import {createStyles} from '../sharedStyles/createStyles';
 
 /** icon prop (prefix) for InputWithHint component */
 const useStyles = createStyles(() => ({
